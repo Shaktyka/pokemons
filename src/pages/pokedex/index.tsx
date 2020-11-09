@@ -4,12 +4,16 @@ import * as React from "react";
 
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import Layout from "../../components/layout";
+import Pokedex from "../../components/pokedex";
 
 const PokedexPage = () => {
   return (
     <>
       <Header />
-      <h1>Pokedex Page</h1>
+      <Layout>
+        <Pokedex />
+      </Layout>
       <Footer />
     </>
   );
