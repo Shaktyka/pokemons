@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+/dist
+*.js.map
+*.log
+**/*.scss.d.ts
+**/*.module.d.ts
+**/*.module.scss.d.ts

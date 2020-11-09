@@ -1,0 +1,42 @@
+@import "../../variables";
+.root {
+  // width: 793px;
+  width: 733px;
+  height: 680px;
+  position: relative;
+  margin-right: -159px;
+}
+
+.smallPokeBall {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+.cloud {
+  position: absolute;
+  left: 12.31%;
+  bottom: 39.22%;
+}
+
+.cloudBig {
+  position: absolute;
+  left: 49.86%;
+  top: -3%;
+}
+
+.pokeBall {
+  position: absolute;
+  // top: 24.38%;
+  top: -1%;
+  right: -12%;
+  width: 335px;
+}
+
+.pikachu {
+  position: absolute;
+  top: 10%;
+  left: -8%;
+  // left: 10.11%;
+  width: 627px;
+}

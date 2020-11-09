@@ -1,0 +1,38 @@
+@import "../../variables";
+.root {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 36px 22px;
+  background-color: $greenBtn;
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 27px;
+  color: $dark;
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+  border: none;
+  border-radius: 11px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  &:active {
+    box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.isFullWidth {
+  width: 100%;
+}
+
+.yellow {
+  background-color: $yellowBtn;
+}
+
+.small {
+  padding: 7px 42px 13px;
+  font-size: 17px;
+  line-height: 20px;
+}

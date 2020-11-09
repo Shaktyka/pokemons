@@ -1,0 +1,76 @@
+@import "../../variables";
+.header {
+  min-height: 93px;
+  background-color: $third;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
+}
+
+@media (max-width: $tabletWith) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    min-height: initial;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .header {
+    padding: 22px 26px 12px;
+    height: 56px;
+    min-height: initial;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 37px;
+}
+
+@media (max-width: $tabletWith) {
+  .container {
+    max-width: initial;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .container {
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo svg {
+  width: 157px;
+  height: 63px;
+}
+
+@media (max-width: $tabletWith) {
+  .logo svg {
+    width: 121px;
+    height: 45px;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .logo svg {
+    width: 58px;
+    height: 22px;
+  }
+  .content {
+    align-items: initial;
+  }
+}

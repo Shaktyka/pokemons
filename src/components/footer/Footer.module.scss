@@ -1,0 +1,81 @@
+@import "../../variables";
+.footer {
+  padding: 33px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin-top: auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 37px;
+}
+
+@media (max-width: $tabletWith) {
+  .container {
+    max-width: initial;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .container {
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $dark;
+}
+
+.text {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.link {
+  color: $dark;
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+}
+
+@media (max-width: $tabletWith) {
+  .content {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .footer {
+    min-height: 62px;
+    padding: 0 0 16px;
+  }
+  .content {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}

@@ -1,0 +1,153 @@
+@import "../../variables";
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+  padding-top: 67px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: $tabletWith) {
+  .main {
+    padding-top: 18px;
+    padding-bottom: 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding-right: 0;
+  width: 1125px;
+}
+
+@media (max-width: $tabletWith) {
+  .container {
+    max-width: initial;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .container {
+    padding: 0;
+  }
+}
+
+.promo {
+  min-height: 727px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: $tabletWith) {
+  .promo {
+    min-height: auto;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.img {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 793px;
+  height: 680px;
+}
+
+@media (max-width: $tabletWith) {
+  .img {
+    width: 706px;
+    height: 539px;
+  }
+}
+
+@media (max-width: $mobileWith) {
+  .img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.description {
+  position: relative;
+  max-width: 516px;
+  // right: -25px;
+  padding-top: 61px;
+  color: $black;
+  z-index: 3;
+}
+
+@media (max-width: $tabletWith) {
+  .description {
+    max-width: initial;
+    margin-top: -50px;
+    right: initial;
+    padding-top: 0;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: $tabletWith) {
+  // .title {
+  //   margin-bottom: 6px;
+  //   line-height: 120%;
+  // }
+}
+
+.text {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+@media (max-width: $tabletWith) {
+  .text {
+    max-width: 639px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+
+.btnWrap {
+  display: flex;
+  margin-top: 64px;
+}
+
+@media (max-width: $tabletWith) {
+  .btnWrap {
+    margin-top: 33px;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promoBtn {
+  padding: 17px 36px 22px;
+  background: #73d677;
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 27px;
+  color: $dark;
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  text-decoration: none;
+}
