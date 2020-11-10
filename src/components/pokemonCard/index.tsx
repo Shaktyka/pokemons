@@ -2,8 +2,27 @@ import React from "react";
 import Heading from "../heading";
 import s from "./PokemonCard.module.scss";
 
+interface IStats {
+  [key: string]: number;
+}
+
+interface IPokemon {
+  nameClean: string;
+  abilities: string[];
+  stats: IStats;
+  types: string[];
+  img: string;
+  name: string;
+  baseExperience: number;
+  height: number;
+  id: number;
+  isDefault: boolean;
+  order: number;
+  weight: number;
+}
+
 interface IPokemonProps {
-  data: {};
+  data: IPokemon;
   id: number;
 }
 

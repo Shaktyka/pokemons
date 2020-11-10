@@ -32,7 +32,7 @@ const Pokedex: React.FC = () => {
       {/* Список покемонов */}
       <PokemonsList pokemons={pokemons} />
       {/* Пагинация */}
-      <ul>
+      <ul className={s.pagination}>
         <li>
           <a href="?page1">1</a>
         </li>
