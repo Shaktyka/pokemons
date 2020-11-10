@@ -2,7 +2,12 @@ import React from "react";
 import Heading from "../heading";
 import s from "./PokemonCard.module.scss";
 
-const PokemonCard = () => {
+interface IPokemonProps {
+  data: {};
+  id: number;
+}
+
+const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
   return (
     <article className={s.root}>
       <div className={s.infoWrap}>

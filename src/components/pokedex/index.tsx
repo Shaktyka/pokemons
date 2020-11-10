@@ -1,9 +1,50 @@
 import * as React from "react";
+import Heading from "../heading";
+import s from "./Pokedex.module.scss";
 
-// import s from "./Pokedex.module.scss";
+import pokemons from "./pokemon-data";
+import PokemonsList from "../pokemonslist";
 
-const Pokedex = () => {
-  return <h1>Контент</h1>;
+const Pokedex: React.FC = () => {
+  return (
+    <section className={s.root}>
+      <Heading size="h3">
+        800 <b>Pokemons</b> for you to choose your favorite
+      </Heading>
+      {/* Форма поиска */}
+      <form className={s.search} action="#">
+        <label htmlFor="search">
+          <span hidden>Поиск покемонов</span>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Encuentra tu pokémon..."
+          />
+        </label>
+        {/* Фильтр */}
+        <div className={s.filters}>
+          <button type="button">Tipo</button>
+          <button type="button">Ataque</button>
+          <button type="button">Experiencia</button>
+        </div>
+      </form>
+      {/* Список покемонов */}
+      <PokemonsList pokemons={pokemons} />
+      {/* Пагинация */}
+      <ul>
+        <li>
+          <a href="?page1">1</a>
+        </li>
+        <li>
+          <a href="?page2">2</a>
+        </li>
+        <li>
+          <a href="?page3">3</a>
+        </li>
+      </ul>
+    </section>
+  );
 };
 
 export default Pokedex;
