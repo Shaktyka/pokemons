@@ -27,11 +27,14 @@ interface IPokemonProps {
 }
 
 const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
+  const name = data.name.slice(0, 1).toUpperCase() + data.name.slice(1);
+  const { types, img, id } = data;
+
   return (
-    <article className={s.root}>
+    <article className={s.root} id={String(id)}>
       <div className={s.infoWrap}>
         <Heading size="h3" className={s.titleName}>
-          Charmander
+          {name}
         </Heading>
         <div className={s.statWrap}>
           <div className={s.statItem}>
@@ -44,14 +47,13 @@ const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
           </div>
         </div>
         <div className={s.labelWrap}>
-          <span className={s.label}>Fire</span>
+          {types.map((type) => (
+            <span className={s.label}>Fire</span>
+          ))}
         </div>
       </div>
       <div className={s.pictureWrap}>
-        <img
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
-          alt="Charmander"
-        />
+        <img src={data.img} alt={name} />
       </div>
     </article>
   );
