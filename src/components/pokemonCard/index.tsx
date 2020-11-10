@@ -23,7 +23,7 @@ interface IPokemon {
 
 interface IPokemonProps {
   data: IPokemon;
-  id: number;
+  key: number;
 }
 
 const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {

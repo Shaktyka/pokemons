@@ -1,4 +1,5 @@
 import * as React from "react";
+import { A } from "hookrouter";
 import s from "./Header.module.scss";
 
 // Компоненты
@@ -13,10 +14,9 @@ const Header = () => {
     <header className={s.header}>
       <div className={s.container}>
         <div className={s.content}>
-          <a className={s.logo} href="/">
+          <A className={s.logo} href="/">
             <PokemonLogoSvg />
-            {/* <img src={logo} width="157" height="63" alt="Логотип" /> */}
-          </a>
+          </A>
           <nav>
             <Menu />
             <Burger />

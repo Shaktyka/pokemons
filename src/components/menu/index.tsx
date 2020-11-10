@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { A } from "hookrouter";
 import cn from "classnames";
 import s from "./Menu.module.scss";
 
@@ -35,15 +36,15 @@ const Menu = () => {
       {menuList.map(({ id, title, link }) => {
         return (
           <li className={cn(s.menuItem)} key={id}>
-            <Link
+            <A
               className={cn(
                 s.menuLink,
                 title === activeMenuItem ? s.activeLink : ``
               )}
-              to={`${link}${title.toLowerCase()}`}
+              href={`${link}${title.toLowerCase()}`}
             >
               {title}
-            </Link>
+            </A>
           </li>
         );
       })}

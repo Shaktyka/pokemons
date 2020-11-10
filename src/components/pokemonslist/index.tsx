@@ -30,7 +30,7 @@ const PokemonsList: React.FC<IPokemonListProps> = ({ pokemons }) => {
   return (
     <div className={s.root}>
       {pokemons.map((pokemon: IPokemon) => {
-        return <PokemonCard data={pokemon} id={pokemon.id} />;
+        return <PokemonCard data={pokemon} key={pokemon.id} />;
       })}
     </div>
   );
