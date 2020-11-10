@@ -2,7 +2,6 @@ import * as React from "react";
 import Heading from "../heading";
 import s from "./Pokedex.module.scss";
 
-import pokemons from "./pokemon-data";
 import PokemonsList from "../pokemonslist";
 
 const Pokedex: React.FC = () => {
@@ -30,7 +29,7 @@ const Pokedex: React.FC = () => {
         </div>
       </form>
       {/* Список покемонов */}
-      <PokemonsList pokemons={pokemons} />
+      <PokemonsList />
       {/* Пагинация */}
       <ul className={s.pagination}>
         <li>

@@ -2,21 +2,21 @@ import React from "react";
 import Heading from "../heading";
 import s from "./PokemonCard.module.scss";
 
-interface IStats {
+type IStats = {
   [key: string]: number;
-}
+};
 
 interface IPokemon {
-  nameClean: string;
+  ["name_clean"]: string;
   abilities: string[];
   stats: IStats;
   types: string[];
   img: string;
   name: string;
-  baseExperience: number;
+  ["base_experience"]: number;
   height: number;
   id: number;
-  isDefault: boolean;
+  ["is_default"]: boolean;
   order: number;
   weight: number;
 }
