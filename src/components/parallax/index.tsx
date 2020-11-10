@@ -8,7 +8,7 @@ import PokeBallPng from "./img/PokeBall2.png";
 import CloudBigPng from "./img/Cloud2.png";
 import PikachuPng from "./img/Pikachu.png";
 
-const Parallax = () => {
+const Parallax: React.FC = () => {
   const [screenX, setScreenX] = useState(0);
   const [screenY, setScreenY] = useState(0);
 

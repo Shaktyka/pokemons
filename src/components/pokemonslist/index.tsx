@@ -2,11 +2,6 @@ import * as React from "react";
 import s from "./PokemonsList.module.scss";
 import PokemonCard from "../pokemonCard";
 
-interface IPokemonListProps<T> {
-  [n: number]: IPokemon;
-  map<U>(fn: (el: T) => U): U[];
-}
-
 interface IStats {
   [key: string]: number;
 }
@@ -24,6 +19,11 @@ interface IPokemon {
   isDefault: boolean;
   order: number;
   weight: number;
+}
+
+interface IPokemonListProps {
+  [n: number]: IPokemon;
+  map<U>(fn: (el: IPokemon) => U): U[];
 }
 
 const PokemonsList: React.FC<IPokemonListProps> = ({ pokemons }) => {

@@ -1,13 +1,14 @@
-import { useRoutes } from "hookrouter";
+import { useRoutes, useRedirect } from "hookrouter";
 import routes from "../../routes";
 
 import "../../assets/styles/normalize.scss";
 import "../../assets/styles/common-styles.scss";
 
-const App = () => {
+const App: React.FC = () => {
+  useRedirect("/home", "/");
   const match = useRoutes(routes);
 
-  return match;
+  return match || "Not found";
 };
 
 export default App;

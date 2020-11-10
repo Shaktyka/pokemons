@@ -9,7 +9,7 @@ import Burger from "../burger";
 // import logo from "./assets/logo.svg";
 import { ReactComponent as PokemonLogoSvg } from "./assets/logo.svg";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className={s.header}>
       <div className={s.container}>
