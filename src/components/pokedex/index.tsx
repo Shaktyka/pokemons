@@ -3,12 +3,18 @@ import Heading from "../heading";
 import s from "./Pokedex.module.scss";
 
 import PokemonsList from "../pokemonslist";
+import { IPokemon } from "../pokemonslist/pokemon-data";
 
-const Pokedex: React.FC = () => {
+interface IPokedex {
+  total: number;
+  pokemons: IPokemon[];
+}
+
+const Pokedex: React.FC<IPokedex> = ({ total, pokemons }) => {
   return (
     <section className={s.root}>
       <Heading size="h3">
-        800 <b>Pokemons</b> for you to choose your favorite
+        {total} <b>Pokemons</b> for you to choose your favorite
       </Heading>
       {/* Форма поиска */}
       <form className={s.search} action="#">
@@ -29,7 +35,7 @@ const Pokedex: React.FC = () => {
         </div>
       </form>
       {/* Список покемонов */}
-      <PokemonsList />
+      <PokemonsList pokemons={pokemons} />
       {/* Пагинация */}
       <ul className={s.pagination}>
         <li>
