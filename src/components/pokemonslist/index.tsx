@@ -2,7 +2,7 @@ import * as React from "react";
 import s from "./PokemonsList.module.scss";
 import PokemonCard from "../pokemonCard";
 
-import { IPokemon } from "./pokemon-data";
+import { IPokemon } from "../../types";
 
 interface IPokemonsListProps {
   pokemons: IPokemon[];

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
+import { IPokemon } from "../../types";
 
 // import s from "./Pokedex.module.scss";
 
@@ -8,11 +9,12 @@ import Layout from "../../components/layout";
 import Pokedex from "../../components/pokedex";
 
 interface IData {
-  [key: string]: any;
+  total: number;
+  pokemons: IPokemon[];
 }
 
 const usePokemons = () => {
-  const [data, setData] = useState<IData>([]);
+  const [data, setData] = useState<IData>({ total: 0, pokemons: [] });
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
 
@@ -24,7 +26,6 @@ const usePokemons = () => {
           "http://zar.hosthot.ru/api/v1/pokemons?limit=30"
         );
         const result = await response.json();
-        // console.log(result);
 
         setData(result);
       } catch (err) {

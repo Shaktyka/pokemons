@@ -3,7 +3,7 @@ import Heading from "../heading";
 import s from "./Pokedex.module.scss";
 
 import PokemonsList from "../pokemonslist";
-import { IPokemon } from "../pokemonslist/pokemon-data";
+import { IPokemon } from "../../types";
 
 interface IPokedex {
   total: number;
