@@ -6,7 +6,6 @@ import s from "./Header.module.scss";
 import Menu from "../menu";
 import Burger from "../burger";
 
-// import logo from "./assets/logo.svg";
 import { ReactComponent as PokemonLogoSvg } from "./assets/logo.svg";
 
 const Header: React.FC = () => {
@@ -27,4 +26,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
