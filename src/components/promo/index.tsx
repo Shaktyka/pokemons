@@ -1,4 +1,7 @@
 import * as React from "react";
+import { navigate } from "hookrouter";
+import { LinkEnum } from "../../routes";
+
 import s from "./Promo.module.scss";
 
 import Button from "../button";
@@ -28,7 +31,7 @@ const Promo: React.FC<IPromoProps> = ({ history }) => {
               and abilities
             </p>
             <div className={s.btnWrap}>
-              <Button onClick={() => history.push("/pokedex")}>
+              <Button onClick={() => navigate(LinkEnum.POKEDEX)}>
                 See pokemons
               </Button>
             </div>

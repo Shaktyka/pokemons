@@ -1,5 +1,6 @@
 import * as React from "react";
 import { A } from "hookrouter";
+import { LinkEnum } from "../../routes";
 
 // import cn from "classnames";
 import s from "./NotFound.module.scss";
@@ -24,7 +25,7 @@ const NotFound = () => {
             The rocket team <span>has won this time.</span>
           </p>
           <div className={s.btnWrap}>
-            <A className={s.notFoundBtn} href="/">
+            <A className={s.notFoundBtn} href={LinkEnum.HOME}>
               Return
             </A>
           </div>

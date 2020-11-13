@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import Header from "../../components/header";
 // import Layout from "../../components/layout";
 import Promo from "../../components/promo";
 import Footer from "../../components/footer";
@@ -16,7 +15,6 @@ interface IHomePageProps {
 const HomePage: React.FC<IHomePageProps> = ({ history }) => {
   return (
     <>
-      <Header />
       <Promo history={history} />
       <Footer />
     </>
