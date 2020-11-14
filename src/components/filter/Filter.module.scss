@@ -1,0 +1,38 @@
+.formSearch {
+  width: 100%;
+}
+
+.formLabel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+input {
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+  padding: 16px 31px 17px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.inputSearch {
+  width: 1088px;
+  height: 53px;
+  background: #f2f2f2;
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+  border-radius: 40px;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
