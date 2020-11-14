@@ -12,6 +12,7 @@ import Pokedex from "./pokedex";
 import PokemonCard from "./pokemonCard";
 import PokemonsList from "./pokemonslist";
 import Promo from "./promo";
+import Legendaries from "./legendaries";
 
 export {
   App,
@@ -21,6 +22,7 @@ export {
   Header,
   Heading,
   Layout,
+  Legendaries,
   Menu,
   NotFound,
   Parallax,
