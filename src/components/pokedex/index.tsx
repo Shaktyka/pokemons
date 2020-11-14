@@ -11,17 +11,17 @@ interface IPokedex {
 }
 
 const Pokedex: React.FC<IPokedex> = ({ total, pokemons }) => {
-  const styles: { [key: string]: string } = {
-    marginBottom: "34px",
-    fontSize: "35px",
-    lineHeight: "41px",
-    letterSpacing: "3px",
-    textAlign: "center",
-  };
+  // const styles: { [key: string]: string } = {
+  //   marginBottom: "34px",
+  //   fontSize: "35px",
+  //   lineHeight: "41px",
+  //   letterSpacing: "3px",
+  //   textAlign: "center",
+  // };
 
   return (
     <section className={s.root}>
-      <Heading size="h3" styles={styles}>
+      <Heading size="h3" className={s.title}>
         {total} <b>Pokemons</b> for you to choose your favorite
       </Heading>
       {/* Форма поиска */}

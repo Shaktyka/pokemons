@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import cn from "classnames";
 import s from "./Heading.module.scss";
 
 interface HeadingProps {
@@ -23,12 +24,17 @@ const fontSizes: IFontSizes = {
   h6: 12,
 };
 
-const Heading: React.FC<HeadingProps> = ({ children, size, styles }) => {
+const Heading: React.FC<HeadingProps> = ({
+  children,
+  size,
+  styles,
+  className,
+}) => {
   const fontSize: number = size ? fontSizes[size] : fontSizes.h1;
 
   const options = {
     style: { fontSize: `${fontSize}px`, ...styles },
-    className: s.root,
+    className: cn(s.root, className),
   };
 
   const header = React.createElement(size, options, children);

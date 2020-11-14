@@ -1,27 +1,9 @@
 import React from "react";
 
 import { Heading } from "..";
+import { IPokemon } from "../../types";
 
 import s from "./PokemonCard.module.scss";
-
-type IStats = {
-  [key: string]: number;
-};
-
-interface IPokemon {
-  ["name_clean"]: string;
-  abilities: string[];
-  stats: IStats;
-  types: string[];
-  img: string;
-  name: string;
-  ["base_experience"]: number;
-  height: number;
-  id: number;
-  ["is_default"]: boolean;
-  order: number;
-  weight: number;
-}
 
 interface IPokemonProps {
   data: IPokemon;
@@ -35,7 +17,7 @@ const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
   return (
     <article className={s.root} id={String(id)}>
       <div className={s.infoWrap}>
-        <Heading size="h3" className={s.titleName}>
+        <Heading size="h5" className={s.titleName}>
           {name}
         </Heading>
         <div className={s.statWrap}>
