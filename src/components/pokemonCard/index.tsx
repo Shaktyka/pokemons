@@ -12,8 +12,8 @@ interface IPokemonProps {
 }
 
 const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
-  // const name = data.name.slice(0, 1).toUpperCase() + data.name.slice(1);
-  const { types, img, id, name } = data;
+  const { types, img, id, name, stats } = data;
+  const firstType: string = types[0];
 
   return (
     <article className={s.root} id={String(id)}>
@@ -23,18 +23,17 @@ const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
         </Heading>
         <div className={s.statWrap}>
           <div className={s.statItem}>
-            <div className={s.statValue}>52</div>
+            <div className={s.statValue}>{stats.attack}</div>
             Attack
           </div>
           <div className={s.statItem}>
-            <div className={s.statValue}>43</div>
+            <div className={s.statValue}>{stats.defense}</div>
             Defense
           </div>
         </div>
         <div className={s.labelWrap}>
           {/* Типы покемонов */}
           {types.map((type) => {
-            // const typeName = type.slice(0, 1).toUpperCase() + type.slice(1);
             return (
               <span
                 className={cn(s.label, s[type as keyof typeof s])}
@@ -46,7 +45,7 @@ const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
           })}
         </div>
       </div>
-      <div className={s.pictureWrap}>
+      <div className={cn(s.pictureWrap, s[firstType as keyof typeof s])}>
         <img src={data.img} alt={name} />
       </div>
     </article>
