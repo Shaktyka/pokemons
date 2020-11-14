@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 
 import { Heading } from "..";
 import { IPokemon } from "../../types";
@@ -11,8 +12,8 @@ interface IPokemonProps {
 }
 
 const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
-  const name = data.name.slice(0, 1).toUpperCase() + data.name.slice(1);
-  const { types, img, id } = data;
+  // const name = data.name.slice(0, 1).toUpperCase() + data.name.slice(1);
+  const { types, img, id, name } = data;
 
   return (
     <article className={s.root} id={String(id)}>
@@ -31,11 +32,18 @@ const PokemonCard: React.FC<IPokemonProps> = ({ data }) => {
           </div>
         </div>
         <div className={s.labelWrap}>
-          {types.map((type) => (
-            <span className={s.label} key={type}>
-              Fire
-            </span>
-          ))}
+          {/* Типы покемонов */}
+          {types.map((type) => {
+            // const typeName = type.slice(0, 1).toUpperCase() + type.slice(1);
+            return (
+              <span
+                className={cn(s.label, s[type as keyof typeof s])}
+                key={type}
+              >
+                {type}
+              </span>
+            );
+          })}
         </div>
       </div>
       <div className={s.pictureWrap}>

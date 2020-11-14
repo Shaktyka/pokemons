@@ -1,6 +1,7 @@
+@import "../../variables";
 .root {
   width: 351px;
-  height: 136px;
+  min-height: 146px;
   box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
   background: #f6f7f9;
   border-radius: 8px;
@@ -17,6 +18,7 @@
 }
 
 .titleName {
+  text-transform: capitalize;
   margin-bottom: 12px;
   text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
 }
@@ -82,6 +84,7 @@
   line-height: 14px;
   text-align: center;
   color: #212121;
+  text-transform: capitalize;
   padding: 0 12px 2px;
   display: flex;
   justify-content: center;
@@ -96,4 +99,46 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.stile,
+.rock,
+.dark {
+  background-color: $stile;
+}
+
+.grass,
+.bug {
+  background-color: $grass;
+}
+
+.ice,
+.water {
+  background-color: $ice;
+}
+
+.fire,
+.fighting,
+.dragon {
+  background-color: $fire;
+}
+
+.normal,
+.gosth {
+  background-color: $normal;
+}
+
+.electric {
+  background-color: $electric;
+}
+
+.ground {
+  background-color: $ground;
+}
+
+.posion,
+.psychic,
+.fairy,
+.ghost {
+  background-color: $psychic;
 }

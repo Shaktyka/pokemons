@@ -21,9 +21,10 @@ const usePokemons = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "http://zar.hosthot.ru/api/v1/pokemons?limit=30"
+          "http://zar.hosthot.ru/api/v1/pokemons?limit=5?offset=10"
         );
         const result = await response.json();
+        // console.log(result);
 
         setData(result);
       } catch (err) {
