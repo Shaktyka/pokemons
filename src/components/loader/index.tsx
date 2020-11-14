@@ -2,7 +2,7 @@ import * as React from "react";
 import PokeBall from "./img/pokeball2.png";
 import s from "./Loader.module.scss";
 
-const Loader = () => {
+const Loader: React.FC = () => {
   return (
     <div className={s.root}>
       <img

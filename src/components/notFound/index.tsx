@@ -5,7 +5,7 @@ import { LinkEnum } from "../../routes";
 import s from "./NotFound.module.scss";
 import TeamRocketImg from "./img/teamRocket.png";
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <div className={s.root}>
       <section className={s.content}>

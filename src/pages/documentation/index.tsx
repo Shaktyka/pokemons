@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Header, Footer, Documentation } from "../../components";
 
-const DocumentationPage = () => {
+const DocumentationPage: React.FC = () => {
   return (
     <>
       <Header />

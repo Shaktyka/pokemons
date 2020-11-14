@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { Layout, NotFound } from "../../components";
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <Layout>
       <NotFound />

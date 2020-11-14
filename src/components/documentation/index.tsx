@@ -2,7 +2,7 @@ import * as React from "react";
 
 // import s from "./Documentation.module.scss";
 
-const Documentation = () => {
+const Documentation: React.FC = () => {
   return <h1>Documentation Content</h1>;
 };
 
