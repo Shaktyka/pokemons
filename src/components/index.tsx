@@ -13,11 +13,13 @@ import PokemonCard from "./pokemonCard";
 import PokemonsList from "./pokemonslist";
 import Promo from "./promo";
 import Legendaries from "./legendaries";
+import Documentation from "./documentation";
 
 export {
   App,
   Burger,
   Button,
+  Documentation,
   Footer,
   Header,
   Heading,
