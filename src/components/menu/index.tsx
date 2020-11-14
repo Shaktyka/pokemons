@@ -1,10 +1,10 @@
 import * as React from "react";
 import { A, usePath } from "hookrouter";
 import cn from "classnames";
-import { GENERAL_MENU } from "../../routes";
-import s from "./Menu.module.scss";
 
-// const activeMenuItem = GENERAL_MENU[0].title;
+import { GENERAL_MENU } from "../../routes";
+
+import s from "./Menu.module.scss";
 
 const Menu: React.FC = () => {
   const path = usePath();

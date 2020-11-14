@@ -2,10 +2,8 @@ import * as React from "react";
 import { A } from "hookrouter";
 import { LinkEnum } from "../../routes";
 
-// import cn from "classnames";
 import s from "./NotFound.module.scss";
 import TeamRocketImg from "./img/teamRocket.png";
-// import Button from "../button"; // подключить кнопку или сделать Link, чтобы изврщениями не заниматься
 
 const NotFound = () => {
   return (

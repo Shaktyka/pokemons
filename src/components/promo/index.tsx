@@ -4,9 +4,7 @@ import { LinkEnum } from "../../routes";
 
 import s from "./Promo.module.scss";
 
-import Button from "../button";
-import Heading from "../heading";
-import Parallax from "../parallax";
+import { Button, Heading, Parallax } from "..";
 
 interface IPromoProps {
   history?: any;

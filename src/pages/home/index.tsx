@@ -1,8 +1,7 @@
 import * as React from "react";
 
 // import Layout from "../../components/layout";
-import Promo from "../../components/promo";
-import Footer from "../../components/footer";
+import { Promo, Footer } from "../../components";
 
 interface HistoryObject {
   push(arg0: string): void;

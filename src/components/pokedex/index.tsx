@@ -2,7 +2,7 @@ import * as React from "react";
 import Heading from "../heading";
 import s from "./Pokedex.module.scss";
 
-import PokemonsList from "../pokemonslist";
+import { PokemonsList } from "..";
 import { IPokemon } from "../../types";
 
 interface IPokedex {

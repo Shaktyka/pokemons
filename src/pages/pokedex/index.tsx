@@ -4,9 +4,7 @@ import { IPokemon } from "../../types";
 
 // import s from "./Pokedex.module.scss";
 
-import Footer from "../../components/footer";
-import Layout from "../../components/layout";
-import Pokedex from "../../components/pokedex";
+import { Footer, Layout, Pokedex } from "../../components";
 
 interface IData {
   total: number;

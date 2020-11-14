@@ -5,8 +5,7 @@ import routes from "../../routes";
 import "../../assets/styles/normalize.scss";
 import "../../assets/styles/common-styles.scss";
 
-import Header from "../header";
-import NotFound from "../notFound";
+import { Header, NotFound } from "..";
 
 const App: React.FC = () => {
   useRedirect("/home", "/");

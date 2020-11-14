@@ -1,5 +1,7 @@
 import React from "react";
-import Heading from "../heading";
+
+import { Heading } from "..";
+
 import s from "./PokemonCard.module.scss";
 
 type IStats = {

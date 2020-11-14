@@ -2,8 +2,7 @@ import * as React from "react";
 
 // import s from "./NotFoundPage.module.scss";
 
-import Layout from "../../components/layout";
-import NotFound from "../../components/notFound";
+import { Layout, NotFound } from "../../components";
 
 const NotFoundPage = () => {
   return (

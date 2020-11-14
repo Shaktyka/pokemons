@@ -3,8 +3,7 @@ import { A } from "hookrouter";
 import s from "./Header.module.scss";
 
 // Компоненты
-import Menu from "../menu";
-import Burger from "../burger";
+import { Burger, Menu } from "..";
 
 import { ReactComponent as PokemonLogoSvg } from "./assets/logo.svg";
 

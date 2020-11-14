@@ -1,6 +1,7 @@
 import * as React from "react";
 import s from "./PokemonsList.module.scss";
-import PokemonCard from "../pokemonCard";
+
+import { PokemonCard } from "..";
 
 import { IPokemon } from "../../types";
 
