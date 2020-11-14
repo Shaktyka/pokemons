@@ -4,7 +4,7 @@ import { IPokemon } from "../../types";
 
 // import s from "./Pokedex.module.scss";
 
-import { Footer, Layout, Pokedex } from "../../components";
+import { Footer, Layout, Loader, Pokedex } from "../../components";
 
 interface IData {
   total: number;
@@ -46,7 +46,7 @@ const PokedexPage: React.FC = () => {
   const { data, isLoading, isError } = usePokemons();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (isError) {

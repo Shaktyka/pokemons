@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Header from "./header";
 import Heading from "./heading";
 import Layout from "./layout";
+import Loader from "./loader";
 import Menu from "./menu";
 import NotFound from "./notFound";
 import Parallax from "./parallax";
@@ -25,6 +26,7 @@ export {
   Heading,
   Layout,
   Legendaries,
+  Loader,
   Menu,
   NotFound,
   Parallax,
