@@ -1,7 +1,9 @@
 import * as React from "react";
 
+import s from "./Home.module.scss";
+
 // import Layout from "../../components/layout";
-import { Promo, Footer } from "../../components";
+import { Content, Promo, Footer } from "../../components";
 
 interface HistoryObject {
   push(arg0: string): void;
@@ -13,10 +15,10 @@ interface IHomePageProps {
 
 const HomePage: React.FC<IHomePageProps> = ({ history }) => {
   return (
-    <>
+    <Content className={s.root}>
       <Promo history={history} />
       <Footer />
-    </>
+    </Content>
   );
 };
 

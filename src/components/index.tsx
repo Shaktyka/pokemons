@@ -1,6 +1,7 @@
 import App from "./app/App";
 import Burger from "./burger";
 import Button from "./button";
+import Content from "./content";
 import Filter from "./filter";
 import Footer from "./footer";
 import Header from "./header";
@@ -21,6 +22,7 @@ export {
   App,
   Burger,
   Button,
+  Content,
   Documentation,
   Filter,
   Footer,

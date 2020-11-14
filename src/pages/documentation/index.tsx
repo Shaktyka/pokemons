@@ -1,14 +1,13 @@
 import * as React from "react";
 
-import { Header, Footer, Documentation } from "../../components";
+import { Content, Footer, Documentation } from "../../components";
 
 const DocumentationPage: React.FC = () => {
   return (
-    <>
-      <Header />
+    <Content>
       <Documentation />
       <Footer />
-    </>
+    </Content>
   );
 };
 

@@ -1,14 +1,14 @@
 import * as React from "react";
 
-// import s from "./NotFoundPage.module.scss";
-
-import { Layout, NotFound } from "../../components";
+import { Content, Layout, NotFound } from "../../components";
 
 const NotFoundPage: React.FC = () => {
   return (
-    <Layout>
-      <NotFound />
-    </Layout>
+    <Content>
+      <Layout>
+        <NotFound />
+      </Layout>
+    </Content>
   );
 };
 

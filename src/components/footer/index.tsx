@@ -1,10 +1,15 @@
 import * as React from "react";
 
+import cn from "classnames";
 import s from "./Footer.module.scss";
 
-const Footer: React.FC = () => {
+interface IProps {
+  className?: string;
+}
+
+const Footer: React.FC<IProps> = ({ className }) => {
   return (
-    <footer className={s.footer}>
+    <footer className={cn(s.footer, className)}>
       <div className={s.container}>
         <div className={s.content}>
           <p className={s.text}>

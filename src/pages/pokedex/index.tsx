@@ -4,7 +4,7 @@ import { IPokemon } from "../../types";
 
 // import s from "./Pokedex.module.scss";
 
-import { Footer, Layout, Loader, Pokedex } from "../../components";
+import { Content, Footer, Layout, Loader, Pokedex } from "../../components";
 
 interface IData {
   total: number;
@@ -21,7 +21,7 @@ const usePokemons = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "http://zar.hosthot.ru/api/v1/pokemons?limit=5?offset=10"
+          "http://zar.hosthot.ru/api/v1/pokemons?limit=30?offset=10"
         );
         const result = await response.json();
         // console.log(result);
@@ -55,12 +55,12 @@ const PokedexPage: React.FC = () => {
   }
 
   return (
-    <>
+    <Content>
       <Layout>
         <Pokedex total={data.total} pokemons={data.pokemons} />
       </Layout>
       <Footer />
-    </>
+    </Content>
   );
 };
 

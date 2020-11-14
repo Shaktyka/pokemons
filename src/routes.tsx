@@ -1,5 +1,10 @@
 import React from "react";
-import { HomePage, PokedexPage } from "./pages";
+import {
+  HomePage,
+  LegendariesPage,
+  DocumentationPage,
+  PokedexPage,
+} from "./pages";
 
 export enum LinkEnum {
   HOME = "/",
@@ -28,12 +33,12 @@ export const GENERAL_MENU: IGeneralMenu[] = [
   {
     title: `Legendaries`,
     link: LinkEnum.LEGENDARIES,
-    component: () => <h1>Legendaries</h1>,
+    component: () => <LegendariesPage />,
   },
   {
     title: `Documentation`,
     link: LinkEnum.DOCUMENTATION,
-    component: () => <h1>Documentation</h1>,
+    component: () => <DocumentationPage />,
   },
 ];
 

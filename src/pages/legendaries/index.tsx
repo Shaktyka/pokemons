@@ -1,14 +1,15 @@
 import * as React from "react";
 
-import { Header, Footer, Legendaries } from "../../components";
+import s from "./Legendaries.module.scss";
+
+import { Content, Footer, Legendaries } from "../../components";
 
 const LegendariesPage: React.FC = () => {
   return (
-    <>
-      <Header />
+    <Content className={s.root}>
       <Legendaries />
       <Footer />
-    </>
+    </Content>
   );
 };
 
