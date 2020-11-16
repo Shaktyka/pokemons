@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { IPokemon } from "../../types";
-
+import config from "../../config";
 // import s from "./Pokedex.module.scss";
 
 import { Content, Footer, Layout, Loader, Pokedex } from "../../components";
@@ -19,10 +19,9 @@ const usePokemons = () => {
   useEffect(() => {
     const getPokemons = async () => {
       setIsLoading(true);
+      const url = `${config.client.server.protocol}://${config.client.server.host}${config.client.endpoint.getPokemons.uri.pathname}`;
       try {
-        const response = await fetch(
-          "http://zar.hosthot.ru/api/v1/pokemons?limit=30?offset=10"
-        );
+        const response = await fetch(url);
         const result = await response.json();
         // console.log(result);
 
