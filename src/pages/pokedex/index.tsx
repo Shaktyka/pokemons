@@ -1,48 +1,20 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-import { IPokemon } from "../../types";
-import req from "../../utils/request";
-// import s from "./Pokedex.module.scss";
+import { useState } from "react";
+import useData from "../../hook/getData";
 
 import { Content, Footer, Layout, Loader, Pokedex } from "../../components";
 
-interface IData {
-  total: number;
-  pokemons: IPokemon[];
-}
-
-const usePokemons = () => {
-  const [data, setData] = useState<IData>({ total: 0, pokemons: [] });
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isError, setIsError] = useState<boolean>(false);
-
-  useEffect(() => {
-    const getPokemons = async () => {
-      setIsLoading(true);
-      // const url = `${config.client.server.protocol}://${config.client.server.host}${config.client.endpoint.getPokemons.uri.pathname}`;
-      try {
-        const result = await req("getPokemons");
-        // console.log(result);
-
-        setData(result);
-      } catch (err) {
-        setIsError(true);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    getPokemons();
-  }, []);
-
-  return {
-    data,
-    isLoading,
-    isError,
-  };
-};
-
 const PokedexPage: React.FC = () => {
-  const { data, isLoading, isError } = usePokemons();
+  const [searchValue, setSearchValue] = useState("");
+  const [query, setQuery] = useState({});
+
+  // const query = useMemo(() => ({
+  //   name: searchValue
+  // }), [searchValue]);
+
+  const { data, isLoading, isError } = useData("getPokemons", query, [
+    searchValue,
+  ]);
 
   if (isLoading) {
     return <Loader />;
@@ -52,10 +24,23 @@ const PokedexPage: React.FC = () => {
     return <div>Something went wrong!</div>;
   }
 
+  // evt: React.ChangeEvent<HTMLInputElement>
+  const handleSearchChange = (target: string) => {
+    setSearchValue(target);
+    setQuery((s) => ({
+      ...s,
+      name: target,
+    }));
+  };
+
   return (
     <Content>
       <Layout>
-        <Pokedex total={data.total} pokemons={data.pokemons} />
+        <Pokedex
+          total={data.total}
+          pokemons={data.pokemons}
+          onChange={handleSearchChange}
+        />
       </Layout>
       <Footer />
     </Content>

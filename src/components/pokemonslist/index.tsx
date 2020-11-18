@@ -6,10 +6,10 @@ import { PokemonCard } from "..";
 import { IPokemon } from "../../types";
 
 interface IPokemonsListProps {
-  pokemons: IPokemon[];
+  pokemons?: IPokemon[];
 }
 
-const PokemonsList: React.FC<IPokemonsListProps> = ({ pokemons }) => {
+const PokemonsList: React.FC<IPokemonsListProps> = ({ pokemons = [] }) => {
   return (
     <div className={s.root}>
       {pokemons.map((pokemon: IPokemon) => {

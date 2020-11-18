@@ -6,18 +6,22 @@ import { Filter, PokemonsList } from "..";
 import { IPokemon } from "../../types";
 
 interface IPokedex {
-  total: number;
-  pokemons: IPokemon[];
+  total?: number;
+  pokemons?: IPokemon[];
+  onChange(target: string): void;
 }
 
-const Pokedex: React.FC<IPokedex> = ({ total, pokemons }) => {
+const Pokedex: React.FC<IPokedex> = ({ total, pokemons, onChange }) => {
   return (
     <section className={s.root}>
       <Heading size="h3" className={s.title}>
         {total} <b>Pokemons</b> for you to choose your favorite
       </Heading>
       {/* Форма поиска */}
-      <Filter />
+      {/* <div>
+        <input type="search" name="search" value={searchValue} onChange={handleSearchChange} />
+      </div> */}
+      <Filter onChange={onChange} />
       {/* Список покемонов */}
       <PokemonsList pokemons={pokemons} />
       {/* Пагинация */}
