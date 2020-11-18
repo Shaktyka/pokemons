@@ -9,13 +9,19 @@ interface IPokedex {
   total?: number;
   pokemons?: IPokemon[];
   onChange(target: string): void;
+  isLoading: boolean;
 }
 
-const Pokedex: React.FC<IPokedex> = ({ total, pokemons, onChange }) => {
+const Pokedex: React.FC<IPokedex> = ({
+  total,
+  pokemons,
+  isLoading,
+  onChange,
+}) => {
   return (
     <section className={s.root}>
       <Heading size="h3" className={s.title}>
-        {total} <b>Pokemons</b> for you to choose your favorite
+        {!isLoading && total} <b>Pokemons</b> for you to choose your favorite
       </Heading>
       {/* Форма поиска */}
       {/* <div>
@@ -23,7 +29,7 @@ const Pokedex: React.FC<IPokedex> = ({ total, pokemons, onChange }) => {
       </div> */}
       <Filter onChange={onChange} />
       {/* Список покемонов */}
-      <PokemonsList pokemons={pokemons} />
+      <PokemonsList pokemons={pokemons} isLoading={isLoading} />
       {/* Пагинация */}
       <ul className={s.pagination}>
         <li>

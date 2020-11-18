@@ -7,14 +7,19 @@ import { IPokemon } from "../../types";
 
 interface IPokemonsListProps {
   pokemons?: IPokemon[];
+  isLoading: boolean;
 }
 
-const PokemonsList: React.FC<IPokemonsListProps> = ({ pokemons = [] }) => {
+const PokemonsList: React.FC<IPokemonsListProps> = ({
+  isLoading,
+  pokemons = [],
+}) => {
   return (
     <div className={s.root}>
-      {pokemons.map((pokemon: IPokemon) => {
-        return <PokemonCard data={pokemon} key={pokemon.id} />;
-      })}
+      {!isLoading &&
+        pokemons.map((pokemon: IPokemon) => {
+          return <PokemonCard data={pokemon} key={pokemon.id} />;
+        })}
     </div>
   );
 };

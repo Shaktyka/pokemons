@@ -7,7 +7,7 @@ const getUrlWithParamsConfig = (endpointConfig: string, query: object) => {
       endpointConfig as keyof typeof config.client.endpoint
     ].uri,
     query: {
-      name: "Pikachu",
+      ...query,
     },
   };
 
