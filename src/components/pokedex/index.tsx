@@ -24,9 +24,6 @@ const Pokedex: React.FC<IPokedex> = ({
         {!isLoading && total} <b>Pokemons</b> for you to choose your favorite
       </Heading>
       {/* Форма поиска */}
-      {/* <div>
-        <input type="search" name="search" value={searchValue} onChange={handleSearchChange} />
-      </div> */}
       <Filter onChange={onChange} />
       {/* Список покемонов */}
       <PokemonsList pokemons={pokemons} isLoading={isLoading} />
