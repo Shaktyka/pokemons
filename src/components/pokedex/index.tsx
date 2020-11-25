@@ -6,8 +6,8 @@ import { Filter, PokemonsList } from "..";
 import { IPokemon } from "../../types";
 
 interface IPokedex {
-  total?: number;
-  pokemons?: IPokemon[];
+  total?: number | null;
+  pokemons?: IPokemon[] | null;
   onChange(target: string): void;
   isLoading: boolean;
 }
