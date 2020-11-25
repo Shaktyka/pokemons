@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import useData from "../../hook/getData";
+import useDebounce from "../../hook/useDebounce";
 import { IPokemons } from "../../interface/pokemons";
 
 import { Content, Footer, Layout, Pokedex } from "../../components";
@@ -13,10 +14,12 @@ const PokedexPage: React.FC = () => {
   const [searchValue, setSearchValue] = useState("");
   const [query, setQuery] = useState<IQuery>({});
 
+  const debouncedValue = useDebounce(searchValue, 500);
+
   const { data, isLoading, isError } = useData<IPokemons>(
     "getPokemons",
     query,
-    [searchValue]
+    [debouncedValue]
   );
 
   if (isError) {
@@ -38,7 +41,7 @@ const PokedexPage: React.FC = () => {
         <Pokedex
           isLoading={isLoading}
           total={data && data.total}
-          pokemons={data.pokemons}
+          pokemons={data && data.pokemons}
           onChange={handleSearchChange}
         />
       </Layout>
