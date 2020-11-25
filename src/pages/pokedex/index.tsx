@@ -38,7 +38,7 @@ const PokedexPage: React.FC = () => {
         <Pokedex
           isLoading={isLoading}
           total={data && data.total}
-          pokemons={data && data.pokemons}
+          pokemons={data.pokemons}
           onChange={handleSearchChange}
         />
       </Layout>

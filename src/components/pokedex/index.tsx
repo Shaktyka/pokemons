@@ -7,7 +7,7 @@ import { IPokemon } from "../../types";
 
 interface IPokedex {
   total?: number | null;
-  pokemons?: IPokemon[] | null;
+  pokemons: IPokemon[] | [];
   onChange(target: string): void;
   isLoading: boolean;
 }

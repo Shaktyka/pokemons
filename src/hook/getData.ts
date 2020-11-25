@@ -1,9 +1,10 @@
+// import { IPokemon } from './../types';
 import { useEffect, useState } from "react";
 import req from "../utils/request";
 
 // interface IData {
-//   total?: number;
-//   pokemons?: IPokemon[];
+//   total: number;
+//   pokemons: IPokemon[] | [];
 // }
 
 const useData = <T>(endpoint: string, query: object, deps: any[] = []) => {

@@ -6,7 +6,7 @@ import { PokemonCard } from "..";
 import { IPokemon } from "../../types";
 
 interface IPokemonsListProps {
-  pokemons?: IPokemon[];
+  pokemons: IPokemon[] | [];
   isLoading: boolean;
 }
 
