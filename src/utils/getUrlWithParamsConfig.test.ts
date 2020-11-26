@@ -1,7 +1,7 @@
 import getUrlWithParamsConfig from "./getUrlWithParamsConfig";
 
 describe("getUrlWithParamsConfig", () => {
-  test("Должна принимать 2 аргумента и возвратить объект с определёнными параметрами", () => {
+  test("Принимает 'getPokemons' и пустой объект и возвращает корректный объект запроса", () => {
     const url = getUrlWithParamsConfig("getPokemons", {});
 
     expect(url).toEqual({
@@ -12,7 +12,7 @@ describe("getUrlWithParamsConfig", () => {
     });
   });
 
-  test('Должна принимать 2 аргумента: "getPokemons" и {name: "Pikachu"} и возвратить объект с определёнными параметрами', () => {
+  test('Принимает "getPokemons" и имя покемона {name: "Pikachu"} и возвращает корректный объект запроса', () => {
     const url = getUrlWithParamsConfig("getPokemons", { name: "Pikachu" });
 
     expect(url).toEqual({
@@ -23,7 +23,7 @@ describe("getUrlWithParamsConfig", () => {
     });
   });
 
-  test('Должна принимать 2 аргумента: "getPokemons" и {id: 25} и возвратить объект с определёнными параметрами', () => {
+  test('Принимает "getPokemons" и id покемона {id: 25} и возвращает корректный объект запроса', () => {
     const url = getUrlWithParamsConfig("getPokemon", { id: 25 });
 
     expect(url).toEqual({
