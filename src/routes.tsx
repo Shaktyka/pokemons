@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import PokemonProps from "./pages/pokemon";
+// import PokemonProps from "./pages/pokemon";
 import {
   HomePage,
   LegendariesPage,
@@ -49,7 +49,7 @@ const SECOND_ROUTES: IGeneralMenu[] = [
   {
     title: "Pokemon",
     link: LinkEnum.POKEMON,
-    component: ({ id }: PokemonProps) => <PokemonPage id={id} />,
+    component: ({ id }) => <PokemonPage id={id} />,
   },
 ];
 
